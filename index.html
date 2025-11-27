@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap Hub</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar glass">
+        <div class="logo">SkillSwap Hub</div>
+        <ul class="nav-links">
+            <li data-page="home">Home</li>
+            <li data-page="explore">Explore</li>
+            <li data-page="ai-tools">AI Tools</li>
+            <li data-page="share">Share</li>
+            <li data-page="profile">Profile</li>
+            <li data-page="about">About</li>
+            <li data-page="contact">Contact</li>
+        </ul>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page">
+        <div class="hero glass">
+            <h1>Welcome to SkillSwap Community</h1>
+            <p>Share your skills, discover new tools, bookmark your favorites, learn from others — powered by AI.</p>
+            <button class="primary-btn" data-page="explore">Explore Now</button>
+        </div>
+    </section>
+
+    <!-- EXPLORE PAGE -->
+    <section id="explore" class="page hidden">
+        <h2 class="section-title">Explore Resources</h2>
+
+        <div class="explore-controls">
+            <input type="text" id="searchBox" class="input glass" placeholder="Search...">
+            <select id="filterCategory" class="input glass">
+                <option value="All">All</option>
+                <option value="Coding">Coding</option>
+                <option value="Art">Art</option>
+                <option value="AI">AI</option>
+            </select>
+        </div>
+
+        <div id="resourceList" class="card-container"></div>
+    </section>
+    <!-- AI TOOLS PAGE -->
+    <section id="ai-tools" class="page hidden">
+        <h2 class="section-title">AI Tools for Hobbies</h2>
+
+        <div id="aiTools" class="card-container">
+            <!-- AI tools will be inserted by script.js -->
+        </div>
+    </section>
+
+
+    <!-- SHARE RESOURCE PAGE -->
+    <section id="share" class="page hidden">
+        <h2 class="section-title">Share a Resource</h2>
+
+        <form id="shareForm" class="glass form-box">
+            <input type="text" id="resourceTitle" class="input glass" placeholder="Resource Title" required>
+            <input type="url" id="resourceLink" class="input glass" placeholder="Resource Link (URL)" required>
+
+            <textarea id="resourceDesc" class="input glass" placeholder="Short Description" required></textarea>
+
+            <select id="resourceCategory" class="input glass">
+                <option value="Coding">Coding</option>
+                <option value="Art">Art</option>
+                <option value="AI">AI</option>
+            </select>
+
+            <button type="submit" class="primary-btn">Add Resource</button>
+        </form>
+    </section>
+
+
+    <!-- PROFILE PAGE -->
+    <section id="profile" class="page hidden">
+        <h2 class="section-title">Your Profile</h2>
+
+        <div class="profile-box glass">
+            <input type="text" id="fullName" class="input glass" placeholder="Full Name">
+
+            <input type="file" id="photoUpload" class="input glass">
+
+            <textarea id="bioText" class="input glass" placeholder="Your Bio (optional)"></textarea>
+
+            <button id="saveProfile" class="primary-btn">Save Profile</button>
+        </div>
+
+        <div id="profilePreview" class="profile-preview"></div>
+    </section>
+    <!-- ABOUT PAGE -->
+    <section id="about" class="page hidden">
+        <h2 class="section-title">About Us</h2>
+
+        <div class="glass about-box">
+            <p>
+                SkillSwap Hub is a community-driven platform designed to help learners exchange
+                skills, share resources, discover tools, and explore AI-powered enhancements in hobbies.
+            </p>
+
+            <p>
+                Built as part of the Leeds Trinity University COM4113 module, this platform is
+                designed using modern web technologies, good software attributes, and scalable architecture.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="page hidden">
+        <h2 class="section-title">Contact Us</h2>
+
+        <form id="contactForm" class="glass form-box">
+            <input type="email" id="contactEmail" class="input glass" placeholder="Your Email" required>
+
+            <textarea id="contactMsg" class="input glass" placeholder="Write your message..." required></textarea>
+
+            <button type="submit" class="primary-btn">Send Message</button>
+        </form>
+
+        <div id="contactResponse" class="response-box"></div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer glass">
+        <p>© 2025 SkillSwap Hub — Developed for Leeds Trinity University</p>
+        <p class="note">Made with ❤️ using HTML, CSS, JavaScript</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
